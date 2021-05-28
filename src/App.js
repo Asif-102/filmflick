@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import NaviGationBar from './Components/NaviGationBar/NaviGationBar';
 
 function App() {
   return (
     <div className="App">
-      <h1>First branch created</h1>
+      <NaviGationBar></NaviGationBar>
     </div>
   );
 }

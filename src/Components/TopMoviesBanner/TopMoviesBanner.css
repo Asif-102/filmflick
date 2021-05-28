@@ -1,0 +1,55 @@
+.topMovies{
+    /* background-image: url(../../images/movie1.png); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.49)), url(../../images/movie1.png);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.topMovies .card{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(../../images/movie1.png);
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
+    /* height: 8rem; */
+}
+.vertical-movies ul li{
+    width: 260px;
+    display: inline-block;
+}
+.card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+.topMovieItem:hover .card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 4px solid rgb(201, 13, 13);
+    /* opacity: 0; */
+}
+
+.card span{
+    font-size: 14px;
+}
+.btn-style{
+    background-color: rgb(201, 13, 13) !important;
+    color: white !important;
+    transition: all .3s ease;
+}
+.btn-style:hover{
+    background-color: rgb(153, 14, 14) !important;
+}
+.card-btn{
+    margin-top: 8px;
+}

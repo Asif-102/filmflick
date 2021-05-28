@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './Components/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-      <h1>First branch created</h1>
-      <p>Added Redux branch</p>
+    <div>
+      <Home></Home>
     </div>
   );
 }

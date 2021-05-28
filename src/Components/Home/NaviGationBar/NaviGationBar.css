@@ -1,0 +1,10 @@
+.navbar-brand{
+    font-size: 25px;
+    color: #dc3545!important;
+}
+.navbar-brand:hover{
+   
+}
+.navItem{
+    text-transform: uppercase;
+}

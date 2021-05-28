@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <h1>First branch created</h1>
       <p>Added Redux branch</p>
+      <p>Added api branch</p>
     </div>
   );
 }

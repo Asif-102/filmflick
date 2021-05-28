@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { POPULAR_MOVIE_URL } from '../../API/API';
+import React, { useEffect} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadMovies } from '../../../redux/actions/filmFlickActions';
 
 const MoviesList = () => {
-    const [popularMovies, setPopularMovies] = useState([]);
-    useEffect(()=>{
-        fetch(POPULAR_MOVIE_URL)
-        .then(res => res.json())
-        .then(data => setPopularMovies(data.results))
-    },[])
+    const movies = useSelector((state) =>{
+        return state.movies.movieLists;
+    })
+
+    const dispatch = useDispatch();
+    
+    useEffect(()=> dispatch(loadMovies()) ,[])
+
     return (
         <div  className="container">
-            <h1>This is movie  List section</h1>
+            <h1>Total Movies {movies.length}</h1>
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
-import NaviGationBar from '../NaviGationBar/NaviGationBar';
+
 import MoviesList from './MoviesList/MoviesList';
+import NaviGationBar from './NaviGationBar/NaviGationBar';
 
 const Home = () => {
     return (

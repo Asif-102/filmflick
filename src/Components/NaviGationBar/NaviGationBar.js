@@ -1,11 +1,12 @@
 import React from 'react';
 import { Form, FormControl, Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
+import './NaviGationBar.css';
 
 const NaviGationBar = () => {
     return (
-        <Navbar bg="dark" expand="lg" variant="dark">
+        <Navbar style={{ background: '#343f40'}} expand="lg" variant="dark">
             <div className="container">
-                <Navbar.Brand className="text-danger" href="#">FilmFlick</Navbar.Brand>
+                <Navbar.Brand className="text-danger font-weight-bold" href="#">FilmFlick</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -13,13 +14,12 @@ const NaviGationBar = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#movies">Movies</Nav.Link>
-                        <Nav.Link href="#tv_shows">TV Shows</Nav.Link>
-                        <Nav.Link href="#videos">Videos</Nav.Link>
-                        <Nav.Link href="#blog">Blog</Nav.Link>
-                        <NavDropdown title="Link" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#Pages">Pages</NavDropdown.Item>
+                        <Nav.Link className="navItem" href="#home">Home</Nav.Link>
+                        <Nav.Link className="navItem" href="#movies">Movies</Nav.Link>
+                        <Nav.Link className="navItem" href="#tv_shows">TV Shows</Nav.Link>
+                        <Nav.Link className="navItem" href="#videos">Videos</Nav.Link>
+                        <Nav.Link className="navItem" href="#blog">Blog</Nav.Link>
+                        <NavDropdown title="PAGES" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#about">About Us</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#pricing1">Pricing Plan 1</NavDropdown.Item>

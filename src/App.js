@@ -23,10 +23,10 @@ function App() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/">About</Link>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <Link to="/">Users</Link>
+                <Link to="/users">Users</Link>
               </li>
             </ul>
           </nav>
@@ -34,10 +34,10 @@ function App() {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/">
+            <Route path="/about">
               <About />
             </Route>
-            <Route path="/">
+            <Route path="/users">
               <Users />
             </Route>
             <Route path="/">
@@ -49,5 +49,18 @@ function App() {
     </div>
   );
 }
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Users() {
+  return <h2>Users</h2>;
+}
+
 
 export default App;

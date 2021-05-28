@@ -3,27 +3,28 @@ import { Form, FormControl, Nav, Navbar, NavDropdown, Button } from 'react-boots
 
 const NaviGationBar = () => {
     return (
-        <div>
-            <Navbar bg="dark" expand="lg" variant="dark">
+        <Navbar bg="dark" expand="lg" variant="dark">
+            <div className="container">
                 <Navbar.Brand className="text-danger" href="#">FilmFlick</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
-                        className="mr-auto my-2 my-lg-0"
+                        className="mx-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Link</Nav.Link>
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#movies">Movies</Nav.Link>
+                        <Nav.Link href="#tv_shows">TV Shows</Nav.Link>
+                        <Nav.Link href="#videos">Videos</Nav.Link>
+                        <Nav.Link href="#blog">Blog</Nav.Link>
                         <NavDropdown title="Link" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#Pages">Pages</NavDropdown.Item>
+                            <NavDropdown.Item href="#about">About Us</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
+                            <NavDropdown.Item href="#pricing1">Pricing Plan 1</NavDropdown.Item>
+                            <NavDropdown.Item href="#pricing2">Pricing Plan 2</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="#" disabled>
-                            Link
-                        </Nav.Link>
                     </Nav>
                     <Form className="d-flex">
                         <FormControl
@@ -35,8 +36,8 @@ const NaviGationBar = () => {
                         <Button variant="outline-danger">Search</Button>
                     </Form>
                 </Navbar.Collapse>
-            </Navbar>
-        </div>
+            </div>
+        </Navbar>
     );
 };
 

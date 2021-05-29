@@ -1,0 +1,55 @@
+.latest-movies{
+    flex-direction: row !important;
+}
+.icons a{
+    width: 38px;
+    height: 38px;
+    text-decoration: none;
+    background-color: white;
+    color: white;
+    font-size: 25px;
+    padding: 10px 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 5px solid rgb(73, 73, 73);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+   
+}
+.icons a:hover{
+    border: 2px solid salmon;
+    transform: rotate(360deg);
+}
+.fab{
+    font-size: 14px;
+    color: rgb(252, 16, 16);
+}
+.plus-icon{
+    margin-bottom: 9px;
+}
+.card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+.latestMovieItem{
+    position: relative;
+}
+.latestMovieItem .card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 4px solid rgb(201, 13, 13);
+    /* opacity: 1; */
+}
+.latestMovieItem:hover .icons{
+    display: block !important;
+}

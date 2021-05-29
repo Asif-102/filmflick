@@ -1,12 +1,52 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faShareAlt, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import './MoviesCardLists.css';
 
 const MoviesCardLists = ({ allMovies }) => {
     const { poster_path } = allMovies;
+
+    const cardMovie = {
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),url(https://image.tmdb.org/t/p/w1280${poster_path})`
+    }
+
     return (
-        <Col xs={4} md={2} className="mb-2 pl-2 pr-2 pb-2">
-            <img className="img-fluid" src={`https://image.tmdb.org/t/p/w1280${poster_path}`} alt='' />
-        </Col>
+        <div className="col-md-3 mb-2 pl-2 pr-2 pb-2">
+            <div className="latestMovieItem">
+                <div className="card border-0 latest-movies" style={cardMovie}>
+                    <div className="col-8 p-0">
+                        <div className="card-body">
+                            <h5 className="card-title text-white">Jurassic World</h5>
+                            <div className="d-flex align-items-center pb-2">
+                                <div className="badge badge-secondary p-1">Action</div>
+                                <span className="ml-2">1hr : 28mins</span>
+                            </div>
+                            <div className="card-btn">
+                                <a href="/" className="btn btn-style px-3 ">
+                                    <FontAwesomeIcon icon={faPlay} />
+                                    <span className="ml-2 text-uppercase">Play Now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-1"></div>
+                    <div className="col-2">
+                        <div className="flex-column icons my-1" style={{display: 'none'}}>
+                            <a href="/" className="mt-2" target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon icon={faShareAlt} className="fab" />
+                            </a>
+                            <a href="/" className="mt-2" target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon icon={faHeart} className="fab" />
+                            </a>
+                            <a href="/" className="mt-2 plus-icon" target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon icon={faPlus}className="fab" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 

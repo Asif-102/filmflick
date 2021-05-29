@@ -11,14 +11,14 @@ const MoviesList = () => {
 
     const dispatch = useDispatch();
 
-    useEffect(() => dispatch(loadMovies()), [])
+    useEffect(() => dispatch(loadMovies()), [dispatch])
 
     return (
-        <div className="container text-white">
-            <h3>Movies</h3>
+        <div className="container text-white mt-5">
+            <h3 className="pb-3">Latest Movies</h3>
             <Row>
                 {
-                    movies?.slice(0,12)?.map((allMovies)=>(<MoviesCardLists key={allMovies.id} allMovies={allMovies} />))
+                    movies?.slice(0,4)?.map((allMovies)=>(<MoviesCardLists key={allMovies.id} allMovies={allMovies} />))
                 }
             </Row>
         </div>

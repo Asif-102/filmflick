@@ -12,7 +12,7 @@
     background-position: center;
     background-size: cover;
     border: none;
-    /* height: 8rem; */
+    transition: all .3s ease;
 }
 .vertical-movies ul li{
     width: 260px;
@@ -31,9 +31,16 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     border-left: 4px solid rgb(201, 13, 13);
+    /* color: white !important; */
     /* opacity: 0; */
+}
+.topMovieItem:hover .card-btn{
+    display: block !important;
+}
+.topMovieItem .card{
+    height: 145px;
 }
 
 .card span{

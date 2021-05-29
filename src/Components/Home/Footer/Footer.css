@@ -1,0 +1,7 @@
+.footer-logo a,
+.footer-logo a:hover{
+    text-decoration: none;
+}
+.footer-logo h2{
+    font-size: 1.7rem !important;
+}

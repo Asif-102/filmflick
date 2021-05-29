@@ -5,7 +5,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className="py-4" style={{backgroundColor: '#0a373e'}}>
+        <div className="py-4" style={{backgroundColor: 'rgb(52, 63, 64)'}}>
             <div className="container custom-container">
             <div className="row mt-3 footerInfo">
                 <div className="col-6 col-md-4 col-lg-3 mb-4 ">
@@ -14,7 +14,7 @@ const Footer = () => {
                     </div>
                     <ul className="list-unstyled  m-0">
                         <li className="mb-1">
-                            <Link to="#" className="text-white text-14 d-block">About ifixFast</Link>
+                            <Link to="#" className="text-white text-14 d-block">About FilmFlick</Link>
                         </li>
                         <li className="mb-1">
                             <Link to="#" className="text-white text-14 d-block">Privacy Policy</Link>
@@ -34,13 +34,10 @@ const Footer = () => {
                     </div>
                     <ul className="list-unstyled  m-0">
                         <li className="mb-1">
-                            <Link to="#" className="text-white text-14 d-block">Project</Link>
+                            <Link to="#" className="text-white text-14 d-block">Blog</Link>
                         </li>
                         <li className="mb-1">
-                            <Link to="#" className="text-white text-14 d-block">Customer Services</Link>
-                        </li>
-                        <li className="mb-1">
-                            <Link to="#" className="text-white text-14 d-block">Order a Service</Link>
+                            <Link to="#" className="text-white text-14 d-block">Watch List</Link>
                         </li>
                         <li className="mb-1">
                             <Link to="#" className="text-white text-14 d-block">Our Team</Link>
@@ -61,12 +58,12 @@ const Footer = () => {
 
                 <div className="col-6 col-md-4 col-lg-3 mb-4">
                     <div className="mb-4">
-                        <h6 className="text-white text-bold">ifixFast</h6>
+                        <h6 className="text-white text-bold">FilmFlick</h6>
                     </div>
                     <ul className="list-unstyled  m-0">
                         <li className="mb-1">
-                            <Link to="#" className="text-white text-14 d-block">
-                                Ashulia, Savar <br/> Dhaka - 1230, Bangladesh <br/> info@ifixFast.com <br/> +880 1969-548437
+                            <Link to="#" className="text-white text-14 d-block text-decoration-none">
+                                Dhanmondi, Dhaka <br/> Dhaka - 1230, Bangladesh <br/> info@FlimFlick.com <br/>
                             </Link>
                         </li>
                     </ul>
@@ -74,14 +71,14 @@ const Footer = () => {
             </div>
 
             <div className="d-flex flex-wrap justify-content-between pb-3 mt-5 border-top">
-                <div className="navbar-brand">
+                <div className="navbar-brand footer-logo">
                     <Link to="#">
-                        <img src={logo}alt="logo" className="img-fluid mt-0 text-white"/>
+                        <h2 className="text-danger">FilmFlick</h2>
                     </Link>
                 </div>
                 <div className="d-flex flex-wrap mt-3">
                     <div>
-                        <span className="text-white d-block mt-2 float-left">&copy; 2021  <Link to="#" className="text-white text-info">Shahnewaz</Link> - All Rights Reserved.</span>
+                        <span className="text-white d-block mt-2 float-left">&copy; 2021 - All Rights Reserved.</span>
                     </div>
                 </div>
             </div>

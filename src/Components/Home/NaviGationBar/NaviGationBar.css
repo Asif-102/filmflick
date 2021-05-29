@@ -1,9 +1,5 @@
 .navbar-brand{
-    font-size: 25px;
-    color: #dc3545!important;
-}
-.navbar-brand:hover{
-   
+    font-size: 1.7rem !important;
 }
 .navItem{
     text-transform: uppercase;

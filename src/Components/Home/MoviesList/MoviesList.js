@@ -18,7 +18,7 @@ const MoviesList = () => {
             <h3>Movies</h3>
             <Row>
                 {
-                    movies?.map((allMovies)=>(<MoviesCardLists key={allMovies.id} allMovies={allMovies} />))
+                    movies?.slice(0,12)?.map((allMovies)=>(<MoviesCardLists key={allMovies.id} allMovies={allMovies} />))
                 }
             </Row>
         </div>

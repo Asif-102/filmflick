@@ -65,12 +65,12 @@
     background-color: rgb(153, 14, 14) !important;
 }
 
-.card{
+.latestMovieItem{
     overflow: hidden;
 }
-.card{
+.latestMovieItem{
     transition: all .3s ease;
 }
-.card:hover{
+.latestMovieItem:hover{
     transform: scale(1.03);
 }

@@ -4,22 +4,22 @@ import { faPlay, faShareAlt, faHeart, faPlus } from '@fortawesome/free-solid-svg
 import './MoviesCardLists.css';
 
 const MoviesCardLists = ({ allMovies }) => {
-    const { poster_path } = allMovies;
+    const { backdrop_path, title, popularity } = allMovies;
 
     const cardMovie = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),url(https://image.tmdb.org/t/p/w1280${poster_path})`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),url(https://image.tmdb.org/t/p/w1280${backdrop_path})`
     }
 
     return (
-        <div className="col-md-3 mb-2 pb-2 card-animate">
+        <div className="col-md-3 mb-2 pb-2">
             <div className="latestMovieItem">
                 <div  className="p-0" >
                     <div  className="card border-0 latest-movies" style={cardMovie}>
                         <div className="card-body">
-                            <h5 className="card-title text-white">Jurassic World</h5>
+                            <h5 className="card-title text-white">{title}</h5>
                             <div className="d-flex align-items-center pb-2">
-                                <div className="badge badge-secondary p-1">Action</div>
-                                <span className="ml-2">1hr : 28mins</span>
+                                <div className="badge badge-secondary p-1">Popularity</div>
+                                <span className="ml-2">{popularity}</span>
                             </div>
                             <div className="card-btn">
                                 <a href="/" className="btn btn-style px-3 ">

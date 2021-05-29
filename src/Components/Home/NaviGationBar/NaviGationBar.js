@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, FormControl, Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './NaviGationBar.css';
 
 const NaviGationBar = () => {
@@ -14,11 +15,12 @@ const NaviGationBar = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link className="navItem" href="#home">Home</Nav.Link>
-                        <Nav.Link className="navItem" href="#movies">Movies</Nav.Link>
-                        <Nav.Link className="navItem" href="#tv_shows">TV Shows</Nav.Link>
-                        <Nav.Link className="navItem" href="#videos">Videos</Nav.Link>
-                        <Nav.Link className="navItem" href="#blog">Blog</Nav.Link>
+                        <Link to="/" className="navItem nav-link">Home</Link>
+                        <Link to="#" className="navItem nav-link">Movies</Link>
+                        <Link to="#" className="navItem nav-link">TV Shows</Link>
+                        <Link to="#" className="navItem nav-link">Videos</Link>
+                        <Link to="/login" className="navItem nav-link">Blog</Link>
+                        {/* <Nav.Link to="/login" className="navItem" href="#blog">Blog</Nav.Link> */}
                         <NavDropdown title="PAGES" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#about">About Us</NavDropdown.Item>
                             <NavDropdown.Divider />

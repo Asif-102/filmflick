@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faShareAlt, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons';
-import './MoviesCardLists.css';
+import '../MoviesList/MoviesCardLists/MoviesCardLists.css';
 
-const MoviesCardLists = ({ allMovies }) => {
+const UpcomingMoviesList = ({ allMovies }) => {
     const { poster_path } = allMovies;
 
     const cardMovie = {
@@ -11,8 +11,8 @@ const MoviesCardLists = ({ allMovies }) => {
     }
 
     return (
-        <div className="col-md-3 mb-2 pb-2 card-animate">
-            <div className="latestMovieItem">
+        <div className="col-md-3 mb-2 pb-2">
+           <div className="latestMovieItem">
                 <div  className="p-0" >
                     <div  className="card border-0 latest-movies" style={cardMovie}>
                         <div className="card-body">
@@ -46,4 +46,4 @@ const MoviesCardLists = ({ allMovies }) => {
     );
 };
 
-export default MoviesCardLists;
+export default UpcomingMoviesList;

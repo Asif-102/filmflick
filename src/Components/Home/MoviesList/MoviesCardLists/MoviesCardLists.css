@@ -1,6 +1,29 @@
 .latest-movies{
     flex-direction: row !important;
 }
+
+.latestMovieItem .card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+.latestMovieItem:hover .card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6) ;
+    border-left: 4px solid rgb(201, 13, 13);
+}
+
+.latestMovieItem:hover .icons{
+    display: block !important;
+}
+
 .icons a{
     width: 38px;
     height: 38px;
@@ -21,35 +44,33 @@
 .icons a:hover{
     border: 2px solid salmon;
     transform: rotate(360deg);
+    background-color: rgb(252, 16, 16);
 }
 .fab{
     font-size: 14px;
     color: rgb(252, 16, 16);
 }
+.fab:hover{
+    color: white;
+}
 .plus-icon{
     margin-bottom: 9px;
 }
-.card .card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 1;
+.btn-style{
+    background-color: rgb(201, 13, 13) !important;
+    color: white !important;
+    transition: all .3s ease;
 }
-.latestMovieItem{
-    position: relative;
+.btn-style:hover{
+    background-color: rgb(153, 14, 14) !important;
 }
-.latestMovieItem .card::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.6);
-    border-left: 4px solid rgb(201, 13, 13);
-    /* opacity: 1; */
+
+.card{
+    overflow: hidden;
 }
-.latestMovieItem:hover .icons{
-    display: block !important;
+.card{
+    transition: all .3s ease;
+}
+.card:hover{
+    transform: scale(1.03);
 }

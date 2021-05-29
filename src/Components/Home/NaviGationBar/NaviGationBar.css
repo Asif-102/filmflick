@@ -1,6 +1,10 @@
 .navbar-brand{
     font-size: 1.7rem !important;
+   
 }
 .navItem{
     text-transform: uppercase;
 }
+/* .topnav {
+    box-shadow: 0 2px 4px 0 rgb(180, 178, 178);
+  } */

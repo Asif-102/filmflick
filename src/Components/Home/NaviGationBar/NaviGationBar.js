@@ -5,7 +5,7 @@ import './NaviGationBar.css';
 
 const NaviGationBar = () => {
     return (
-        <Navbar style={{ background: '#343f40'}} expand="lg" variant="dark">
+        <Navbar className="navbar-fixed topnav" collapseOnSelect expand="lg" sticky='top' style={{ background: '#343f40'}} expand="lg" variant="dark">
             <div className="container">
                 <Navbar.Brand className="text-danger font-weight-bold" href="#">FilmFlick</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />

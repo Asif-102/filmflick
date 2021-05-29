@@ -18,7 +18,7 @@ const UpcomingMovies = () => {
             <h3 className="pb-3">Upcoming Movies</h3>
             <Row>
                 {
-                    movies?.slice(0, 4)?.map((allMovies)=>(<UpcomingMoviesList key={allMovies.id} allMovies={allMovies} />))
+                    movies?.slice(6, 10)?.map((allMovies)=>(<UpcomingMoviesList key={allMovies.id} allMovies={allMovies} />))
                 }
             </Row>
         </div>

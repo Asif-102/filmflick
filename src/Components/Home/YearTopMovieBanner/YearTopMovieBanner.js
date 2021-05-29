@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import yearTopMovie from '../../../images/movie3.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import './YearTopMovieBanner.css';
+import { loadMovies } from '../../../redux/actions/filmFlickActions';
+import { useDispatch, useSelector } from 'react-redux';
 
 const YearTopMovieBanner = () => {
+    const movies = useSelector((state) => {
+        return state.movies.movieLists;
+    })
+    const dispatch = useDispatch();
+
+    useEffect(() => dispatch(loadMovies()), [dispatch])
+    const movie = movies.map(movie => movie);
+    console.log(movie[10]);
+
     const topMovie = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),url(${yearTopMovie})`,
     }
+    
     return (
         <div className="year-top-movie" style={topMovie}>
             <div className="container pad-topMovie">

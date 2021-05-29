@@ -1,0 +1,16 @@
+.year-top-movie{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.year-top-movie p{
+    margin-right: 15px;
+    color: #d6d4d4;
+}
+.pad-topMovie{
+    padding: 90px 0px;
+}

@@ -10,7 +10,7 @@ const YearTopMovieBanner = () => {
     }
     
     return (
-        <div className="year-top-movie" style={topMovie}>
+        <div data-testid="top-movie" className="year-top-movie" style={topMovie}>
             <div className="container pad-topMovie">
                 <div className="d-md-flex align-items-center">
                     <div className="col-12 col-md-6 p-0 marginTop">

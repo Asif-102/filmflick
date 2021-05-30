@@ -7,7 +7,7 @@ import './Header.css';
 const Header = () => {
  
     return (
-        <div className="header-area">
+        <div data-testid="header" className="header-area">
             <div className="slider-area">
                 <Slider></Slider>
             </div>

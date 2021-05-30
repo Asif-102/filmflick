@@ -22,7 +22,7 @@ const TopMoviesBanner = () => {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${topMovies})`
     }
     return (
-        <section className="container">
+        <section data-testid="top-movies" className="container">
             <div className="top-movies" style={topMoviesStyle}>
                 <div className="vertical-movies">
                     <ul className="list-inline d-flex  flex-column ml-4">

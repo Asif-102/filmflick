@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import slider2 from '../../../images/slider/godzilla vs cong.jpg';
+import slider2 from '../../../images/slider/pirates.jpg';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import StarRatings from './StarRatings';

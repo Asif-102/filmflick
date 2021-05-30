@@ -14,7 +14,7 @@ const MoviesList = () => {
     useEffect(() => dispatch(loadMovies()), [dispatch])
 
     return (
-        <div className="container text-white">
+        <div data-testid="latestMovie" className="container text-white">
             <h3 className="pb-3">Latest Movies</h3>
             <Row>
                 {

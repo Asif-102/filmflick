@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
+import MovieDetail from './MovieDetails/MovieDetail';
 import MoviesList from './MoviesList/MoviesList';
 // import NaviGationBar from './NaviGationBar/NaviGationBar';
 import TopMoviesBanner from './TopMoviesBanner/TopMoviesBanner';
@@ -18,6 +19,7 @@ const Home = () => {
             <UpcomingMovies></UpcomingMovies>
             <TopMoviesBanner></TopMoviesBanner>
             <YearTopMovieBanner></YearTopMovieBanner>
+            <MovieDetail></MovieDetail>
             <Footer></Footer>
         </div>
     );

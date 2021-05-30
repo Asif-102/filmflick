@@ -1,5 +1,7 @@
 import React from 'react';
-import { Form, FormControl, Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
+import { Form, FormControl, Nav, Navbar, NavDropdown, Button, Dropdown } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle, faSignInAlt, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './NaviGationBar.css';
 
@@ -35,7 +37,24 @@ const NaviGationBar = () => {
                             className="mr-2"
                             aria-label="Search"
                         />
-                        <Button variant="outline-danger">Search</Button>
+
+
+                        <Dropdown>
+                            <Dropdown.Toggle variant="danger" id="dropdown-basic">
+                                <FontAwesomeIcon style={{ fontSize: '20px' }} icon={faUserCircle} />
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">
+                                    <FontAwesomeIcon icon={faSignInAlt} />    Login
+                                </Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">
+                                    <FontAwesomeIcon style={{marginRight:'4px'}} icon={faArrowCircleRight} />
+                                    Register
+                                </Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+
                     </Form>
                 </Navbar.Collapse>
             </div>

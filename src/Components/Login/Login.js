@@ -2,13 +2,25 @@ import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import { useAuth } from './UseAuth';
 
 const Login = () => {
+    const auth = useAuth();
     const [returningUser , setReturningUser] = useState(false);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const password = useRef();
     password.current = watch('password');
     const onSubmit = data => {
+        if(returningUser){
+            if(data.email && data.password){
+                auth.signInUser(data.email, data.password);
+            }
+        }
+        else{
+            if(data.name && data.email && data.password && data.confirm_password){
+                auth.createUser(data.email, data.confirm_password, data.name)
+            }
+        }
         console.log(data);
     };
 

@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadMovies } from '../../../redux/actions/filmFlickActions';
 import Carousel from 'react-bootstrap/Carousel';
 import slider2 from '../../../images/slider/godzilla vs cong.jpg';
 import slider3 from '../../../images/slider/POI.jpg';
@@ -12,6 +14,16 @@ import './Slider.css'
 // import ReactStars from "react-rating-stars-component";
 import StarRatings from './StarRatings';
 const Slider = () => {
+
+    const movies = useSelector((state) => {
+        return state.movies.movieLists;
+    })
+
+    const dispatch = useDispatch();
+
+    useEffect(() => dispatch(loadMovies()), [dispatch])
+
+
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);

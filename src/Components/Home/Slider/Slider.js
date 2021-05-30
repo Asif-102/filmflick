@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import './Slider.css';
-import SliderItems from './SliderItems/SliderItems';
 
 const Slider = () => {
     useEffect(() => {

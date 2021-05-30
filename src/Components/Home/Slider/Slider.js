@@ -1,28 +1,16 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { loadMovies } from '../../../redux/actions/filmFlickActions';
 import Carousel from 'react-bootstrap/Carousel';
 import slider2 from '../../../images/slider/godzilla vs cong.jpg';
-import slider3 from '../../../images/slider/POI.jpg';
-import slider4 from '../../../images/slider/Fury.jpg';
-import trailer_icon from '../../../images/slider/3024584.png'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Typewriter from "typewriter-effect";
-import './Slider.css'
 import StarRatings from './StarRatings';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import './Slider.css';
+import SliderItems from './SliderItems/SliderItems';
 
 const Slider = () => {
-
-    const movies = useSelector((state) => {
-        return state.movies.movieLists;
-    })
-
-    const dispatch = useDispatch();
-
-    useEffect(() => dispatch(loadMovies()), [dispatch])
-
-
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
@@ -34,29 +22,49 @@ const Slider = () => {
                     <div className="header-area container">
                         <img src={slider2} alt="" className="d-block w-100 slider-img slider-area" />
                         <div className="col-lg-7 col-md-12 content p-0">
-                            <h1 className="font-weight-bolder text-uppercase">
-                                <Typewriter data-aos="zoom-in-right" data-aos-delay="200"
-                                    options={{
-                                        strings: ["GodZilla vs Cong"],
-                                        autoStart: true,
-                                        loop: true,
-                                        delay: 50
-                                    }}
-                                />
+                            <h1 className="font-weight-bolder text-uppercase mb-4 header-title pt-5">
+                                Pirates of sea
                             </h1>
-                            <StarRatings></StarRatings>
-                            <p data-aos="fade-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, error aut? Voluptate laborum omnis dicta!</p>
-                            <h6 className="font-weight-bold" data-aos="zoom-up">Htarring: ABC</h6>
-                            <h6 className="font-weight-bold" data-aos="zoom-out">Generes: ABC</h6>
-                            <h6 className="font-weight-bold" data-aos="zoom-in">Tags: A, B, C</h6>
+                            <div className="d-flex flex-wrap align-items-center mb-3">
+                                <StarRatings></StarRatings>
+                                <span className="text-white ml-2">4.8(Imdb)</span>
+                                <div className="d-flex flex-wrap align-items-center">
+                                    <span className="badge badge-secondary p-2 ml-2">GP</span>
+                                    <span className="ml-3" style={{color: '#d8d6d6'}}>1hr : 56mins</span>
+                                </div>
+                            </div>
+                            <p data-aos="fade-left mb-3" style={{color: '#d8d6d6'}}>
+                                Piracy is an act of robbery or criminal violence by ship or boat-borne attackers upon another ship or a coastal area, typically with the goal of stealing cargo and other valuable items or properties.                                         
+                            </p>
+                            <h6 className="font-weight-bold" data-aos="zoom-up">
+                                <span style={{color: '#e50914'}}>Starring:</span>
+                                <span className="ml-2 text-white">James Chinlund, James Earl Jones </span>
+                            </h6>
+                            <h6 className="font-weight-bold" data-aos="zoom-out">
+                                <span style={{color: '#e50914'}}>Genres:</span>
+                                <span className="ml-2 text-white">Action, Adventure</span>
+                            </h6>
+                            <h6 className="font-weight-bold pb-2" data-aos="zoom-in">
+                                <span style={{color: '#e50914'}}>Tag:</span>
+                                <span className="ml-2 text-white">Action, Adventure </span>
+                            </h6>
+                            <div className="card-btn mt-4">
+                                <a href="/" className="btn btn-style px-4 ">
+                                    <FontAwesomeIcon icon={faPlay} />
+                                    <span className="ml-2 text-uppercase">Play Now</span>
+                                </a>
+                            </div>
                         </div>
                         <div className="col-lg-5 col-md-12 content d-flex justify-content-center">
                             <div className="svg">
                                 <a className="button" target="_blank" href="/">
                                     <svg>
-                                        <rect height="40" width="130" fill="transparent" />
+                                        <rect height="40" width="140" fill="transparent" />
                                     </svg>
-                                    <span><img style={{ width: '15px', height: '15px' }} src={trailer_icon} alt="" /> Watch Trailer</span>
+                                    <span> 
+                                        <FontAwesomeIcon icon={faPlayCircle}className="text-white" />
+                                        <strong className="ml-1">Watch Trailer</strong>
+                                    </span>
                                 </a>
                             </div>
                         </div>

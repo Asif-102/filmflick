@@ -1,10 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faShareAlt, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import '../MoviesList/MoviesCardLists/MoviesCardLists.css';
 
 const UpcomingMoviesList = ({ allMovies }) => {
-    const { poster_path,  title, popularity } = allMovies;
+    const { poster_path,  title, popularity, id } = allMovies;
 
     const cardMovie = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),url(https://image.tmdb.org/t/p/w1280${poster_path})`
@@ -22,10 +23,10 @@ const UpcomingMoviesList = ({ allMovies }) => {
                                 <span className="ml-2">{popularity}</span>
                             </div>
                             <div className="card-btn">
-                                <a href="/" className="btn btn-style px-3 ">
+                                <Link to={`movie/${id}`} className="btn btn-style px-3 ">
                                     <FontAwesomeIcon icon={faPlay} />
                                     <span className="ml-2 text-uppercase">Play Now</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="flex-column icons my-1" style={{display: 'none'}}>

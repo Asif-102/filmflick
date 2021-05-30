@@ -4,8 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faSignInAlt, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './NaviGationBar.css';
+import { useAuth } from '../../Login/UseAuth';
+import { useHistory } from "react-router-dom";
 
 const NaviGationBar = () => {
+    const auth = useAuth();
+
+    let history = useHistory();
+
+    function handleClick() {
+      history.push("/login");
+    }
     return (
         <Navbar id="main-nav" className="navbar-fixed topnav" collapseOnSelect expand="lg" sticky='top' expand="lg" variant="dark">
             <div className="container">
@@ -45,13 +54,19 @@ const NaviGationBar = () => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">
-                                    <FontAwesomeIcon icon={faSignInAlt} />    Login
-                                </Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">
-                                    <FontAwesomeIcon style={{marginRight:'4px'}} icon={faArrowCircleRight} />
-                                    Register
-                                </Dropdown.Item>
+                                {
+                                    auth.user ?
+                                        <Dropdown.Item onClick={()=>auth.signOut()}>
+                                            <FontAwesomeIcon style={{ marginRight: '4px' }} icon={faArrowCircleRight} />
+                                            LogOut
+                                        </Dropdown.Item>
+                                        :
+                                        <Dropdown.Item onClick={handleClick}>
+                                            <FontAwesomeIcon icon={faSignInAlt} />
+                                            Login
+                                        </Dropdown.Item>
+                                }
+
                             </Dropdown.Menu>
                         </Dropdown>
 

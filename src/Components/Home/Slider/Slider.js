@@ -48,6 +48,7 @@ const Slider = () => {
                             <h6 className="font-weight-bold pb-2" data-aos="zoom-in">
                                 <span style={{color: '#e50914'}}>Tag:</span>
                                 <span className="ml-2 text-white">Horror, Thriller</span>
+                                {/* problem */}
                             </h6>
                             <div className="card-btn mt-4">
                                 <a href="/" className="btn btn-style px-4 ">

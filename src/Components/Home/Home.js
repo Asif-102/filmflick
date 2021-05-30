@@ -19,7 +19,7 @@ const Home = () => {
             <UpcomingMovies></UpcomingMovies>
             <TopMoviesBanner></TopMoviesBanner>
             <YearTopMovieBanner></YearTopMovieBanner>
-            <MovieDetail></MovieDetail>
+            {/* <MovieDetail></MovieDetail> */}
             <Footer></Footer>
         </div>
     );

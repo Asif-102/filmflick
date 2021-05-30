@@ -37,7 +37,7 @@ const MovieDetail = () => {
                          <strong>.</strong>
                          <strong>Romance</strong>
                      </p>
-                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quos soluta eum reprehenderit, enim odio.</p>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quos Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet est atque asperiores eligendi minus nostrum. soluta eum reprehenderit, enim odio.</p>
                      <div className="d-flex icons my-1" style={{display: 'none'}}>
                             <a href="/" className="mt-2" target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon icon={faShareAlt} className="fab" />

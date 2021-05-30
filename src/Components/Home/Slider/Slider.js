@@ -10,6 +10,9 @@ import Typewriter from "typewriter-effect";
 // import slider1 from '../../../../images/Sliders/updated/slider4.webp';
 import './Slider.css'
 // import ReactStars from "react-rating-stars-component";
+// import ReactStars from "react-rating-stars-component";
+// import ReactStars from "";
+
 import StarRatings from './StarRatings';
 const Slider = () => {
     useEffect(() => {
@@ -58,7 +61,7 @@ const Slider = () => {
                             <h6 className="font-weight-bold" data-aos="zoom-in">Tags: A, B, C</h6>
                         </div>
                         <div className="col-md-6 content">
-                        <div class="svg">
+                            <div class="svg">
                                 <a class="button" target="_blank" href="https://www.youtube.com/watch?v=odM92ap8_c0&ab_channel=WarnerBros.PicturesWarnerBros.Pictures">
                                     <svg>
                                         <rect height="40" width="130" fill="transparent" />
@@ -72,7 +75,7 @@ const Slider = () => {
 
                 </Carousel.Item>
                 <Carousel.Item>
-                <div className="header-area">
+                    <div className="header-area">
                         <img
                             className="d-block w-100 custom-img slider-area"
                             src={slider3}
@@ -109,7 +112,7 @@ const Slider = () => {
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
-                <div className="header-area">
+                    <div className="header-area">
                         <img
                             className="d-block w-100 custom-img slider-area"
                             src={slider4}

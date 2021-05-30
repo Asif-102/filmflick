@@ -30,7 +30,7 @@ const NaviGationBar = () => {
                         <Link to="#" className="navItem nav-link">Movies</Link>
                         <Link to="#" className="navItem nav-link">TV Shows</Link>
                         <Link to="#" className="navItem nav-link">Videos</Link>
-                        <Link to="/login" className="navItem nav-link">Blog</Link>
+                        <Link to="#" className="navItem nav-link">Blog</Link>
                         {/* <Nav.Link to="/login" className="navItem" href="#blog">Blog</Nav.Link> */}
                         <NavDropdown title="PAGES" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#about">About Us</NavDropdown.Item>
@@ -46,8 +46,6 @@ const NaviGationBar = () => {
                             className="mr-2"
                             aria-label="Search"
                         />
-
-
                         <Dropdown>
                             <Dropdown.Toggle variant="danger" id="dropdown-basic">
                                 <FontAwesomeIcon style={{ fontSize: '20px' }} icon={faUserCircle} />
@@ -66,7 +64,6 @@ const NaviGationBar = () => {
                                             Login
                                         </Dropdown.Item>
                                 }
-
                             </Dropdown.Menu>
                         </Dropdown>
 

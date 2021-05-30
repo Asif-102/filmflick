@@ -1,5 +1,9 @@
+.slider-img{
+    position: fixed;
+    z-index: 0;
+    opacity: 0.6;
+}
 .slider-area{
-    background-image: url('../../../images/slider/sgh.png');
     background-position: center;
     background-size: cover;
 

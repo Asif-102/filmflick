@@ -17,15 +17,16 @@
     height: 100%;
     /* opacity: 0.7; */
 }
+.header-title{
+    font-size: 4.5rem;
+}
 .content{
     position: relative;
     z-index: 1;
     color:white;
     margin-left: 15px;
 }
-.content h1{
-    color: rgb(255, 238, 0);
-}
+
 .content h6{
     color:rgb(0, 255, 234);
 }
@@ -43,7 +44,7 @@
     color: rgb(22, 243, 114);
     position: relative;
     display: inline-block;
-    width: 130px;
+    width: 140px;
     height: 40px;
     margin: 20px;
     overflow: hidden;
@@ -55,12 +56,15 @@
     left: 0;
     stroke-width: 4px;
     stroke-dashoffset: 400px;
-    stroke: rgba(124, 228, 238, 0.863);
+    stroke: rgba(254, 255, 255, 0.863);
+}
+.svg .button rect:hover{
+    stroke: red;
 }
 
 .svg .button span {
     color: rgb(240, 240, 250);
-    width: 150px;
+    width: 140px;
     height: 50px;
     display: inline-block;
     text-align: center;
@@ -72,8 +76,8 @@
 }
 
 .svg .button span:hover {
-    color: rgb(6, 5, 17);
-    background: rgba(160, 241, 224, 0.719);
+    color: white;
+    /* background: rgba(160, 241, 224, 0.719); */
     transition: all 1s cubic-bezier(1.25s 0, 1.15, 1, 1);
     transition-delay: .5s;
 }

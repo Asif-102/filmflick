@@ -10,8 +10,9 @@
     text-transform: uppercase;
 }
 .nav-link{
-    font-size: 18px;
+    font-size: 16px;
     color: #dad8d8 !important;
+    color: red;
 }
 /* .topnav {
     box-shadow: 0 2px 4px 0 rgb(180, 178, 178);

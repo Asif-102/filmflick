@@ -20,8 +20,8 @@ const Slider = () => {
                 <Carousel.Item>
                     <div className="header-area container">
                         <img src={slider2} alt="" className="d-block w-100 slider-img slider-area" />
-                        <div className="col-lg-7 col-md-12 content p-0">
-                            <h1 className="font-weight-bolder text-uppercase mb-4 header-title pt-5">
+                        <div className=" col-12 col-lg-7 col-md-12 content p-0">
+                            <h1 className="font-weight-bolder text-uppercase mb-4 header-title pt-md-5">
                                 Pirates of sea
                             </h1>
                             <div className="d-flex flex-wrap align-items-center mb-3">
@@ -54,7 +54,7 @@ const Slider = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="col-lg-5 col-md-12 content d-flex justify-content-center">
+                        <div className="col-lg-5 col-md-12 content header-watch d-md-flex justify-content-center">
                             <div className="svg">
                                 <a className="button" target="_blank" href="/">
                                     <svg>

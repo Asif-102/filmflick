@@ -11,7 +11,7 @@ const StarRatings = () => {
             return ( 
             <label>
                 <input name="rating" value={ratingValue} type="radio" onClick={()=>setRating(ratingValue)} />
-                <FaStar  className="star" size={30} color={ratingValue<= rating ? "#ffc107" : "#e4e5e9"} 
+                <FaStar  className="star" size={20} color={ratingValue<= rating ? "#e4e5e9" : "#e50914"} 
             onMouseEnter={()=>setHover(ratingValue)}
             onMouseLeave={()=>setHover(null)}
             />

@@ -4,10 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faSignInAlt, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './NaviGationBar.css';
+import { useAuth } from '../../Login/UseAuth';
+import { useHistory } from "react-router-dom";
 
 const NaviGationBar = () => {
+    const auth = useAuth();
+
+    let history = useHistory();
+
+    function handleClick() {
+      history.push("/login");
+    }
     return (
-        <Navbar className="navbar-fixed topnav" collapseOnSelect expand="lg" sticky='top' style={{ background: '#343f40'}} expand="lg" variant="dark">
+        <Navbar id="main-nav" className="navbar-fixed topnav" collapseOnSelect expand="lg" sticky='top' expand="lg" variant="dark">
             <div className="container">
                 <Navbar.Brand className="text-danger font-weight-bold" href="#">FilmFlick</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -21,7 +30,7 @@ const NaviGationBar = () => {
                         <Link to="#" className="navItem nav-link">Movies</Link>
                         <Link to="#" className="navItem nav-link">TV Shows</Link>
                         <Link to="#" className="navItem nav-link">Videos</Link>
-                        <Link to="/login" className="navItem nav-link">Blog</Link>
+                        <Link to="#" className="navItem nav-link">Blog</Link>
                         {/* <Nav.Link to="/login" className="navItem" href="#blog">Blog</Nav.Link> */}
                         <NavDropdown title="PAGES" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#about">About Us</NavDropdown.Item>
@@ -37,21 +46,24 @@ const NaviGationBar = () => {
                             className="mr-2"
                             aria-label="Search"
                         />
-
-
                         <Dropdown>
                             <Dropdown.Toggle variant="danger" id="dropdown-basic">
                                 <FontAwesomeIcon style={{ fontSize: '20px' }} icon={faUserCircle} />
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">
-                                    <FontAwesomeIcon icon={faSignInAlt} />    Login
-                                </Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">
-                                    <FontAwesomeIcon style={{marginRight:'4px'}} icon={faArrowCircleRight} />
-                                    Register
-                                </Dropdown.Item>
+                                {
+                                    auth.user ?
+                                        <Dropdown.Item onClick={()=>auth.signOut()}>
+                                            <FontAwesomeIcon style={{ marginRight: '4px' }} icon={faArrowCircleRight} />
+                                            LogOut
+                                        </Dropdown.Item>
+                                        :
+                                        <Dropdown.Item onClick={handleClick}>
+                                            <FontAwesomeIcon icon={faSignInAlt} />
+                                            Login
+                                        </Dropdown.Item>
+                                }
                             </Dropdown.Menu>
                         </Dropdown>
 

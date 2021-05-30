@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import slider2 from '../../../images/slider/godzilla vs cong.jpg';
-import slider3 from '../../../images/slider/POI.jpg';
-import slider4 from '../../../images/slider/Fury.jpg';
-import trailer_icon from '../../../images/slider/3024584.png'
+import slider1 from '../../../images/slider/pirates.jpg';
+import slider2 from '../../../images/slider/Shadow.jpg';
+import slider3 from '../../../images/slider/vamp.jpg';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+<<<<<<< HEAD
 import Typewriter from "typewriter-effect";
 // import slider1 from '../../../../images/Sliders/updated/slider4.webp';
 import './Slider.css'
@@ -13,68 +13,83 @@ import './Slider.css'
 // import ReactStars from "react-rating-stars-component";
 // import ReactStars from "";
 
+=======
+>>>>>>> 76140ac11af98261a4c67edbc64ebd5144d81fc4
 import StarRatings from './StarRatings';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import './Slider.css';
+
 const Slider = () => {
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
 
-
-
     return (
         <div className="">
             <Carousel controls={false} indicators interval={4500} pause={false}>
-                <Carousel.Item>
-                    <div className="header-area">
-                        <img
-                            className="d-block w-100 custom-img slider-area"
-                            src={slider2}
-                            alt="First slide"
-                        />
-                        <div className="col-md-6 content">
-                            {/* <h1 data-aos="zoom-in-right" data-aos-delay="200">Movie Name</h1> */}
-                            <h1 className="font-weight-bolder text-uppercase">
-                                <Typewriter data-aos="zoom-in-right" data-aos-delay="200"
-                                    options={{
-                                        strings: ["GodZilla vs Cong"],
-                                        autoStart: true,
-                                        loop: true,
-                                        delay: 50
-                                    }}
-                                />
+            <Carousel.Item>
+                    <div className="header-area container">
+                        <img src={slider2} alt="" className="d-block w-100 slider-img slider-area" />
+<<<<<<< HEAD
+                        <div className="col-lg-7 col-md-12 content p-0">
+                            <h1 className="font-weight-bolder text-uppercase mb-4 header-title pt-5">
+                                Shadow
                             </h1>
-                            <StarRatings></StarRatings>
-                            {/* <ReactStars
-                                count={5}
-                                
-                                size={24}
-                                isHalf={true}
-                                emptyIcon={<i className="far fa-star"></i>}
-                                halfIcon={<i className="fa fa-star-half-alt"></i>}
-                                fullIcon={<i className="fa fa-star"></i>}
-                                activeColor="#ffd700"
-                            /> */}
-
-                            <p data-aos="fade-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, error aut? Voluptate laborum omnis dicta!</p>
-                            <h6 className="font-weight-bold" data-aos="zoom-up">Htarring: ABC</h6>
-                            <h6 className="font-weight-bold" data-aos="zoom-out">Generes: ABC</h6>
-                            <h6 className="font-weight-bold" data-aos="zoom-in">Tags: A, B, C</h6>
+                            <div className="d-flex flex-wrap align-items-center mb-3">
+                                <StarRatings></StarRatings>
+                                <span className="text-white ml-2">4.8(Imdb)</span>
+                                <div className="d-flex flex-wrap align-items-center">
+                                    <span className="badge badge-secondary p-2 ml-2">GP</span>
+                                    <span className="ml-3" style={{color: '#d8d6d6'}}>2hr : 45mins</span>
+                                </div>
+                            </div>
+                            <p data-aos="fade-left mb-3" style={{color: '#d8d6d6'}}>
+                                A shadow is a dark (real image) area where light from a light source is blocked by an opaque object. It occupies all of the three-dimensional volume behind an object with light in front of it. A shadow is a dark (real image) area where light from a light source is blocked by an opaque object.                                                                       
+                            </p>
+                            <h6 className="font-weight-bold" data-aos="zoom-up">
+                                <span style={{color: '#e50914'}}>Starring:</span>
+                                <span className="ml-2 text-white">Shahadi Wright Joseph, Amy Sedaris</span>
+                            </h6>
+                            <h6 className="font-weight-bold" data-aos="zoom-out">
+                                <span style={{color: '#e50914'}}>Genres:</span>
+                                <span className="ml-2 text-white">Adventure, Animation, Action</span>
+                            </h6>
+                            <h6 className="font-weight-bold pb-2" data-aos="zoom-in">
+                                <span style={{color: '#e50914'}}>Tag:</span>
+                                <span className="ml-2 text-white">Horror, Thriller</span>
+                            </h6>
+                            <div className="card-btn mt-4">
+                                <a href="/" className="btn btn-style px-4 ">
+                                    <FontAwesomeIcon icon={faPlay} />
+                                    <span className="ml-2 text-uppercase">Play Now</span>
+                                </a>
+                            </div>
                         </div>
+<<<<<<< HEAD
                         <div className="col-md-6 content">
                             <div class="svg">
                                 <a class="button" target="_blank" href="https://www.youtube.com/watch?v=odM92ap8_c0&ab_channel=WarnerBros.PicturesWarnerBros.Pictures">
+=======
+                        <div className="col-lg-5 col-md-12 content d-flex justify-content-center">
+                            <div className="svg">
+                                <a className="button" target="_blank" href="/">
+>>>>>>> 76140ac11af98261a4c67edbc64ebd5144d81fc4
                                     <svg>
-                                        <rect height="40" width="130" fill="transparent" />
+                                        <rect height="40" width="140" fill="transparent" />
                                     </svg>
-                                    <span><img style={{ width: '15px', height: '15px' }} src={trailer_icon} alt="" /> Watch Trailer</span>
+                                    <span> 
+                                        <FontAwesomeIcon icon={faPlayCircle}className="text-white" />
+                                        <strong className="ml-1">Watch Trailer</strong>
+                                    </span>
                                 </a>
                             </div>
                         </div>
                     </div>
-
-
                 </Carousel.Item>
                 <Carousel.Item>
+<<<<<<< HEAD
                     <div className="header-area">
                         <img
                             className="d-block w-100 custom-img slider-area"
@@ -92,26 +107,65 @@ const Slider = () => {
                                         delay: 50
                                     }}
                                 />
+=======
+                    <div className="header-area container">
+                        <img src={slider1} alt="" className="d-block w-100 slider-img slider-area" />
+                        <div className="col-lg-7 col-md-12 content p-0">
+                            <h1 className="font-weight-bolder text-uppercase mb-4 header-title pt-5">
+=======
+                        <div className=" col-12 col-lg-7 col-md-12 content p-0">
+                            <h1 className="font-weight-bolder text-uppercase mb-4 header-title pt-md-5">
+>>>>>>> develop
+                                Pirates of sea
+>>>>>>> 76140ac11af98261a4c67edbc64ebd5144d81fc4
                             </h1>
-                            <StarRatings></StarRatings>
-                            <p data-aos="fade-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, error aut? Voluptate laborum omnis dicta!</p>
-                            <h6 className="font-weight-bold" data-aos="zoom-up">Htarring: ABC</h6>
-                            <h6 className="font-weight-bold" data-aos="zoom-out">Generes: ABC</h6>
-                            <h6 className="font-weight-bold" data-aos="zoom-in">Tags: A, B, C</h6>
+                            <div className="d-flex flex-wrap align-items-center mb-3">
+                                <StarRatings></StarRatings>
+                                <span className="text-white ml-2">4.8(Imdb)</span>
+                                <div className="d-flex flex-wrap align-items-center">
+                                    <span className="badge badge-secondary p-2 ml-2">GP</span>
+                                    <span className="ml-3" style={{color: '#d8d6d6'}}>2hr : 15mins</span>
+                                </div>
+                            </div>
+                            <p data-aos="fade-left mb-3" style={{color: '#d8d6d6'}}>
+                                Piracy is an act of robbery or criminal violence by ship or boat-borne attackers upon another ship or a coastal area, typically with the goal of stealing cargo and other valuable items or properties.                                         
+                            </p>
+                            <h6 className="font-weight-bold" data-aos="zoom-up">
+                                <span style={{color: '#e50914'}}>Starring:</span>
+                                <span className="ml-2 text-white">James Chinlund, James Earl Jones </span>
+                            </h6>
+                            <h6 className="font-weight-bold" data-aos="zoom-out">
+                                <span style={{color: '#e50914'}}>Genres:</span>
+                                <span className="ml-2 text-white">Action, Adventure</span>
+                            </h6>
+                            <h6 className="font-weight-bold pb-2" data-aos="zoom-in">
+                                <span style={{color: '#e50914'}}>Tag:</span>
+                                <span className="ml-2 text-white">Action, Adventure </span>
+                            </h6>
+                            <div className="card-btn mt-4">
+                                <a href="/" className="btn btn-style px-4 ">
+                                    <FontAwesomeIcon icon={faPlay} />
+                                    <span className="ml-2 text-uppercase">Play Now</span>
+                                </a>
+                            </div>
                         </div>
-                        <div className="col-md-6 content">
-                            <div class="svg">
-                                <a class="button" target="_blank" href="https://www.youtube.com/watch?v=WYDWSNMTauQ&ab_channel=LadyGisborne15LadyGisborne15">
+                        <div className="col-lg-5 col-md-12 content header-watch d-md-flex justify-content-center">
+                            <div className="svg">
+                                <a className="button" target="_blank" href="/">
                                     <svg>
-                                        <rect height="40" width="130" fill="transparent" />
+                                        <rect height="40" width="140" fill="transparent" />
                                     </svg>
-                                    <span><img style={{ width: '15px', height: '15px' }} src={trailer_icon} alt="" /> Watch Trailer</span>
+                                    <span> 
+                                        <FontAwesomeIcon icon={faPlayCircle}className="text-white" />
+                                        <strong className="ml-1">Watch Trailer</strong>
+                                    </span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
+<<<<<<< HEAD
                     <div className="header-area">
                         <img
                             className="d-block w-100 custom-img slider-area"
@@ -129,26 +183,59 @@ const Slider = () => {
                                         delay: 50
                                     }}
                                 />
+=======
+                    <div className="header-area container">
+                        <img src={slider3} alt="" className="d-block w-100 slider-img slider-area" />
+                        <div className="col-lg-7 col-md-12 content p-0">
+                            <h1 className="font-weight-bolder text-uppercase mb-4 header-title pt-5">
+                                WORST VAMPIRE
+>>>>>>> 76140ac11af98261a4c67edbc64ebd5144d81fc4
                             </h1>
-                            <StarRatings></StarRatings>
-                            <p data-aos="fade-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, error aut? Voluptate laborum omnis dicta!</p>
-                            <h6 className="font-weight-bold" data-aos="zoom-up">Htarring: ABC</h6>
-                            <h6 className="font-weight-bold" data-aos="zoom-out">Generes: ABC</h6>
-                            <h6 className="font-weight-bold" data-aos="zoom-in">Tags: A, B, C</h6>
+                            <div className="d-flex flex-wrap align-items-center mb-3">
+                                <StarRatings></StarRatings>
+                                <span className="text-white ml-2">4.8(Imdb)</span>
+                                <div className="d-flex flex-wrap align-items-center">
+                                    <span className="badge badge-secondary p-2 ml-2">GP</span>
+                                    <span className="ml-3" style={{color: '#d8d6d6'}}>1hr : 56mins</span>
+                                </div>
+                            </div>
+                            <p data-aos="fade-left mb-3" style={{color: '#d8d6d6'}}>
+                                The writers at We Are Movie Geeks have counted down our collective top 10 of the worst vampires in film history.  These are creatures of the night so goofy, so lame, and so odd, they make us dream of the days of Max Schreck.  Hell, they make us long for the days of Willem Dafoe playing Max Schreck.  So hear you are, sans Nicolas Cage from VAMPIRE’S KISS, even, the ten worst vampires in motion picture history.                                        
+                            </p>
+                            <h6 className="font-weight-bold" data-aos="zoom-up">
+                                <span style={{color: '#e50914'}}>Starring:</span>
+                                <span className="ml-2 text-white">James Chinlund, James Earl Jones </span>
+                            </h6>
+                            <h6 className="font-weight-bold" data-aos="zoom-out">
+                                <span style={{color: '#e50914'}}>Genres:</span>
+                                <span className="ml-2 text-white">Action, Adventure</span>
+                            </h6>
+                            <h6 className="font-weight-bold pb-2" data-aos="zoom-in">
+                                <span style={{color: '#e50914'}}>Tag:</span>
+                                <span className="ml-2 text-white">Action, Adventure </span>
+                            </h6>
+                            <div className="card-btn mt-4">
+                                <a href="/" className="btn btn-style px-4 ">
+                                    <FontAwesomeIcon icon={faPlay} />
+                                    <span className="ml-2 text-uppercase">Play Now</span>
+                                </a>
+                            </div>
                         </div>
-                        <div className="col-md-6 content">
-                            <div class="svg">
-                                <a class="button" target="_blank" href="https://www.youtube.com/watch?v=DNHuK1rteF4&ab_channel=MovieclipsTrailersMovieclipsTrailers">
+                        <div className="col-lg-5 col-md-12 content d-flex justify-content-center">
+                            <div className="svg">
+                                <a className="button" target="_blank" href="/">
                                     <svg>
-                                        <rect height="40" width="130" fill="transparent" />
+                                        <rect height="40" width="140" fill="transparent" />
                                     </svg>
-                                    <span><img style={{ width: '15px', height: '15px' }} src={trailer_icon} alt="" /> Watch Trailer</span>
+                                    <span> 
+                                        <FontAwesomeIcon icon={faPlayCircle}className="text-white" />
+                                        <strong className="ml-1">Watch Trailer</strong>
+                                    </span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </Carousel.Item>
-
             </Carousel>
         </div>
     );

@@ -1,15 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faShareAlt, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons';
-import './MoviesCardLists.css';
-import { Link } from 'react-router-dom';
-import { useAuth } from '../../../Login/UseAuth';
+import '../MoviesList/MoviesCardLists/MoviesCardLists.css';
 
-const MoviesCardLists = ({ allMovies }) => {
-
-    const auth = useAuth();
-
-    const { backdrop_path, title, popularity, id } = allMovies;
+const RecommendedCardLists = ({ allMovies }) => {
+    const { backdrop_path, title, popularity } = allMovies;
 
     const cardMovie = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),url(https://image.tmdb.org/t/p/w1280${backdrop_path})`
@@ -18,8 +13,8 @@ const MoviesCardLists = ({ allMovies }) => {
     return (
         <div className="col-md-3 mb-2 pb-2">
             <div className="latestMovieItem">
-                <div className="p-0" >
-                    <div className="card border-0 latest-movies" style={cardMovie}>
+                <div  className="p-0" >
+                    <div  className="card border-0 latest-movies" style={cardMovie}>
                         <div className="card-body">
                             <h5 className="card-title text-white">{title}</h5>
                             <div className="d-flex align-items-center pb-2">
@@ -27,20 +22,13 @@ const MoviesCardLists = ({ allMovies }) => {
                                 <span className="ml-2">{popularity}</span>
                             </div>
                             <div className="card-btn">
-                                {
-                                    auth.user ?
-                                        <Link to={`movie/${id}`} className="btn btn-style px-3 ">
-                                            <FontAwesomeIcon icon={faPlay} />
-                                            <span className="ml-2 text-uppercase">Play Now</span>
-                                        </Link> :
-                                        <Link to="/login" className="btn btn-style px-3 ">
-                                            <FontAwesomeIcon icon={faPlay} />
-                                            <span className="ml-2 text-uppercase">Play Now</span>
-                                        </Link>
-                                }
+                                <a href="/" className="btn btn-style px-3 ">
+                                    <FontAwesomeIcon icon={faPlay} />
+                                    <span className="ml-2 text-uppercase">Play Now</span>
+                                </a>
                             </div>
                         </div>
-                        <div className="flex-column icons my-1" style={{ display: 'none' }}>
+                        <div className="flex-column icons my-1" style={{display: 'none'}}>
                             <a href="/" className="mt-2" target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon icon={faShareAlt} className="fab" />
                             </a>
@@ -48,7 +36,7 @@ const MoviesCardLists = ({ allMovies }) => {
                                 <FontAwesomeIcon icon={faHeart} className="fab" />
                             </a>
                             <a href="/" className="mt-2 plus-icon" target="_blank" rel="noreferrer">
-                                <FontAwesomeIcon icon={faPlus} className="fab" />
+                                <FontAwesomeIcon icon={faPlus}className="fab" />
                             </a>
                         </div>
                     </div>
@@ -58,4 +46,4 @@ const MoviesCardLists = ({ allMovies }) => {
     );
 };
 
-export default MoviesCardLists;
+export default RecommendedCardLists;

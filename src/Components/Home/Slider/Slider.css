@@ -17,6 +17,9 @@
     height: 100%;
     /* opacity: 0.7; */
 }
+.header-area img{
+    opacity: 0.7;
+}
 .header-title{
     font-size: 4.5rem;
 }

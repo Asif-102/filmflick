@@ -1,8 +1,8 @@
-import { ADD_TO_WATCH_LIST, LOAD_MOVIES } from "../actions/filmFlickActions";
+import { ADD_TO_WATCH_LIST, LOAD_MOVIES, MOVIE_DETAIL } from "../actions/filmFlickActions";
 
 const initialState = {
     movieLists: [],
-    watchLists: [],
+    movieDetail: [],
 }
 
 const filmFlickReducer = (state = initialState, action) =>{
@@ -11,6 +11,13 @@ const filmFlickReducer = (state = initialState, action) =>{
             const newState = {
                 ...state,
                 movieLists: action.payload
+            };
+            return newState;
+        }
+        case MOVIE_DETAIL:{
+            const newState = {
+                ...state,
+                movieDetail: action.payload
             };
             return newState;
         }

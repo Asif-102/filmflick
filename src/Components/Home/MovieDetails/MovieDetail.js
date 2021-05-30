@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import StarRatings from '../Slider/StarRatings';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faShareAlt, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons';
-import trailer_icon from '../../../images/slider/3024584.png'
-import Iframe from 'react-iframe'
+import { faShareAlt, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons';
+import trailer_icon from '../../../images/slider/3024584.png';
+import { useParams } from "react-router-dom";
+import Iframe from 'react-iframe';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { movieDetail } from '../../../redux/actions/filmFlickActions';
+
 const MovieDetail = () => {
+    let { id } = useParams();
+    const movie = useSelector((state) => {
+        return state.movies.movieDetail;
+    })
+    
+    const dispatch = useDispatch();
+
+    useEffect(() => dispatch(movieDetail(id)), [dispatch])
+
+    const {original_title, overview, backdrop_path, genres} = movie;
     
     return (
         <div className="container pt-5">
             <div className="movie-detail">
-            <Iframe url="http://www.youtube.com/embed/xDMP3i36naA"
-        width="1050px"
-        height="350px"
-        id="myId"
-        className="myClassname"
-        display="initial"
-        position="relative"/>
+            <img src={`https://image.tmdb.org/t/p/w1280${backdrop_path}`} className="img-fluid" alt="" />
                 <div className="name-link d-flex text-white">
                     <div className="col-md-9">
-                     <h1>movie Name</h1>
+                     <h1>{original_title}</h1>
                      <StarRatings></StarRatings>
                      <p>
                          <strong>Action</strong>
@@ -37,7 +46,7 @@ const MovieDetail = () => {
                          <strong>.</strong>
                          <strong>Romance</strong>
                      </p>
-                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quos soluta eum reprehenderit, enim odio.</p>
+                     <p>{overview}</p>
                      <div className="d-flex icons my-1" style={{display: 'none'}}>
                             <a href="/" className="mt-2" target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon icon={faShareAlt} className="fab" />

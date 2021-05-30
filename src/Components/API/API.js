@@ -9,6 +9,8 @@
 */ 
 // 
 
-const API_KEY = '870967436c1517d581daf3b245495790';
+export const API_KEY = '870967436c1517d581daf3b245495790';
 
 export const POPULAR_MOVIE_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}`;
+
+export const FIND_MOVIE_DETAIL = `https://api.themoviedb.org/3/movie/{movie_id}?api_key=${API_KEY}&language=en-US`;

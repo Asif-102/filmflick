@@ -108,7 +108,7 @@ const Slider = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="col-lg-5 col-md-12 content d-flex justify-content-center">
+                        <div className="col-lg-5 col-md-12 content header-watch d-md-flex justify-content-center">
                             <div className="svg">
                                 <a className="button" target="_blank" href="/">
                                     <svg>
